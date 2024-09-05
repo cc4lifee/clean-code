@@ -8,10 +8,8 @@
             public name: string,
             public gender: Gender,
             public birthdate: Date) {
-
         }
     }
-
 
     class User extends Person {
         public lastAccess: Date;
@@ -31,7 +29,6 @@
         }
     }
 
-
     class UserSettings extends User {
         constructor(
             public workingDirectory: string,
@@ -41,7 +38,7 @@
             name: string,
             gender: Gender,
             birthdate: Date
-        ){
+        ) {
             super(email, role, name, gender, birthdate)
         }
     }
@@ -53,11 +50,11 @@
         'Admin',
         'Cristhian',
         'M',
-        new Date(1999-2-1)
+        new Date(1999 - 2 - 1)
 
     )
 
-    console.log({userSettings});
+    console.log({ userSettings, areCredentialsValid: userSettings.checkCredentials() });
 
 })();
 
